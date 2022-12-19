@@ -8,7 +8,7 @@ large db 0h
 .code
 mov ax,@data 
 mov ds,ax 
-mov cx,10 
+mov cx,03h
 mov al,0h 
 lea si,num 
 
@@ -24,4 +24,4 @@ top: mov bl,[si]
 
 mov ah,4ch 
 int 21h 
-end 
+end

@@ -1,20 +1,18 @@
-.MODEL SMALL
-.STACK 100H
-.CODE
+.model small
+.stack 100H
+.code
 
-MOV SI,2000H
-MOV AL,[SI]
-SUB AL,30H
-MOV BL,AL
-INC SI
-MOV AL,[SI]
-SUB AL,30H
-MOV CL,04H
-ROL AL,CL
-ADD AL,BL
-INC SI
-MOV [SI],AL
+mov si,2000H
+mov al,[si]
+mov bl,al 
+and al,0FH
+and bl,0F0H 
+mov cl,04H 
+rol bl,cl 
+add al,30H 
+add bl,30H 
+mov ah,bl
 
-MOV AH,4CH
-INT 21H
-END
+mov AH,4CH
+int 21H
+end
