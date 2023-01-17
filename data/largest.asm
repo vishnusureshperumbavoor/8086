@@ -2,7 +2,7 @@
 .stack 100h 
 
 .data 
-num db 10h,20h,30h 
+num db 10h,05h,30h 
 
 .code 
 mov ax,@data 
@@ -11,8 +11,8 @@ mov cx,03h
 mov al,0h 
 lea si,num 
 top: mov bl,[si] 
-cmp al,bl 
 inc si  
+cmp al,bl 
 jnc nocarry 
 mov al,bl  
 nocarry: dec cx 

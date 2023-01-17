@@ -16,12 +16,12 @@ lea di,data2
 mov cx,3
 
 repe cmpsb 
-jnz msg
+jnz bottom
 lea dx,gud 
-jmp disp
+jmp bottom2
 
-msg: lea dx,bad 
-disp: mov ah,09h
+bottom: lea dx,bad 
+bottom2: mov ah,09h
 int 21h
 
 mov ah,4ch 
