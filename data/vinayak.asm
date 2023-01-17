@@ -4,10 +4,14 @@
 .data
 var1 db 10,13,'even number $'
 var2 db 10,13,'odd number $'
+var3 db 12,16,'input a number $'
 
 .code 
 mov ax,@data
-mov ds,ax 
+mov ds,ax
+mov dx,offset var3
+mov ah,9
+int 21h
 mov ah,01h
 int 21h 
 mov bl,02h 
