@@ -1,14 +1,6 @@
-mount e: e:\
+mount e: e:\8086
 e:
-cd 8086 
 
-masm 
-
-
-.model small 
-.stack 100h
-.code 
-
-mov ah,4ch 
-int 21h 
-end 
+masm filename.asm
+link filename.asm
+debug filename.asm
