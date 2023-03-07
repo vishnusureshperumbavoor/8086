@@ -1,7 +1,7 @@
 .model small
 .stack 100h
-.data
 
+.data
 data1 db 'VSP'
 data2 db 'VSe'
 gud db "strings are same $"
