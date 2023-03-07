@@ -3,4 +3,4 @@ e:
 
 masm filename.asm\
 link filename.asm\
-debug filename.asm\
+debug filename.asm
